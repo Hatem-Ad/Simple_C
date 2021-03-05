@@ -1,20 +1,6 @@
 #include <stdio.h>
 
-int menu()
-{
-    int choix = 0;
-    while (choix < 1 || choix > 4)
-    {
-        printf("*** MENU ***\n");
-        printf("1 - Couscous\n");
-        printf("2 - Makrouna\n");
-        printf("3 - Kamouniya\n");
-        printf("4 - Rouz\n");
-        printf("Choix : ");
-        scanf("%d", &choix);
-    }
-    return choix;
-}
+int menu();
 
 int main (int argc , char* argv)
 {
@@ -38,4 +24,20 @@ int main (int argc , char* argv)
         break;
     }
     printf("*** Merci pour Votre Service :) ***\n");
+}
+
+int menu()
+{
+    int choix = 0;
+    while (choix < 1 || choix > 4)
+    {
+        printf("*** MENU ***\n");
+        printf("1 - Couscous\n");
+        printf("2 - Makrouna\n");
+        printf("3 - Kamouniya\n");
+        printf("4 - Rouz\n");
+        printf("Choix : ");
+        scanf("%d", &choix);
+    }
+    return choix;
 }
