@@ -14,7 +14,6 @@ int main(int argc , char *argv[])
     printf("%d heurs et %d minutes !\n", heurs, minutes);
     return 0;
 }
-
 void decoupeMinutes(int heurs, int minutes)
 {
     heurs = minutes / 60;
