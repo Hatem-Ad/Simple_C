@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void decoupeMinutes(int heurs, int minutes); // fichier.h pas important dans le court programme
+void decoupeMinutes(int *heurs, int *minutes);
 
 int main(int argc , char *argv[])
 {
@@ -9,13 +9,14 @@ int main(int argc , char *argv[])
     printf("Donner Combient de minutes : ");
     scanf("%d", &minutes);
 
-    decoupeMinutes(heurs, minutes);
+    decoupeMinutes(&heurs, &minutes);
 
     printf("%d heurs et %d minutes !\n", heurs, minutes);
     return 0;
 }
-void decoupeMinutes(int heurs, int minutes)
+
+void decoupeMinutes(int *heurs, int *minutes)
 {
-    heurs = minutes / 60;
-    minutes = minutes % 60;
+    *heurs = *minutes / 60;
+    *minutes = *minutes % 60;
 }
